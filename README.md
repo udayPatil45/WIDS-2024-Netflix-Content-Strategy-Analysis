@@ -3,3 +3,5 @@ Our Content Strategy Analysis project aims to investigate how streaming platform
 
 Join us as we explore these fascinating topics, and feel free to contribute or ask questions!
 
+# Resources
+# Week 1
