@@ -5,7 +5,7 @@ Join us as we explore these fascinating topics, and feel free to contribute or a
 
 # Resources
 # Week 1 Python and Key Libraries for Data Analysis
-Aim: Build a foundation in Python programming and introduce essential libraries for data analysis and visualization.
+Aim: Build a foundation in Python programming and essential libraries for data analysis and visualization.
 
 ### Important Links
 * [Python in One video](https://youtu.be/kqtD5dpn9C8?feature=shared) <br/>
