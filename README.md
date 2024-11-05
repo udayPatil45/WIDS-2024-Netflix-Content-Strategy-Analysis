@@ -5,3 +5,5 @@ Join us as we explore these fascinating topics, and feel free to contribute or a
 
 # Resources
 # Week 1
+Aim 
+Python and Key Libraries for Data Analysis
