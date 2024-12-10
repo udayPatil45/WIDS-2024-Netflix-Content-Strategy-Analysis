@@ -13,3 +13,4 @@ Aim: Build a foundation in Python programming and essential libraries for data a
 * [Numpy Tutorial](https://youtu.be/QUT1VHiLmmI) <br/>
 * [Matplotlib Tutorial](https://youtu.be/3Xc3CA655Y4?feature=shared) <br/>
 
+### Week 1 Assignment 
