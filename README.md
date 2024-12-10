@@ -37,7 +37,7 @@ Observe how the number of top 20 players under 25 years of age has changed over 
 7. Time Trend of Magnus Carlsen's Elo
 Track Magnus Carlsen's Elo rating over time.
 
-## Dataset Notes
+## Note
 * The Date column contains values stored as strings in the format YYYY MMM (e.g., 2020 Jan). To analyze time trends:
 1. Extract the year by slicing the first four characters from the date string (e.g., 2020 from 2020 Jan).
 2. Convert the resulting year values into integers.
