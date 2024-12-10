@@ -15,7 +15,7 @@ Aim: Build a foundation in Python programming and essential libraries for data a
 
 ### Week 1 Assignment
 ## Task Overview
-You are provided with a dataset. Your goal is to perform the following analyses using Python:
+You are provided with a dataset. Your goal is to perform the following analyses using Python: 
 1. Highest Elo
 Identify the player with the highest Elo rating in the dataset.
 
