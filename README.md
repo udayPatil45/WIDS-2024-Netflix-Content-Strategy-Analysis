@@ -9,6 +9,7 @@ Aim: Build a foundation in Python programming and essential libraries for data a
 
 ### Important Links
 * [Python Tutorial for Beginners](https://youtu.be/vLqTf2b6GZw?feature=shared) <br/>
-* [Numpy Tutorial](https://youtu.be/QUT1VHiLmmI) <br/>
 * [Pandas Tutorial](https://www.youtube.com/watch?v=vmEHCJofslg&t=767s) <br/>
+* [Numpy Tutorial](https://youtu.be/QUT1VHiLmmI) <br/>
+* [Matplotlib Tutorial](https://youtu.be/3Xc3CA655Y4?feature=shared) <br/>
 
