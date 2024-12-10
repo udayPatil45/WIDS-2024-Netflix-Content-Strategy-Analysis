@@ -8,7 +8,7 @@ Join us as we explore these fascinating topics, and feel free to contribute or a
 Aim: Build a foundation in Python programming and essential libraries for data analysis and visualization.
 
 ### Important Links
-* [Python Tutorial for Beginners]([https://youtu.be/kqtD5dpn9C8?feature=shared](https://youtu.be/vLqTf2b6GZw?feature=shared)) <br/>
+* [Python Tutorial for Beginners](https://youtu.be/vLqTf2b6GZw?feature=shared) <br/>
 * [Numpy Tutorial](https://youtu.be/QUT1VHiLmmI) <br/>
 * [Pandas Tutorial](https://www.youtube.com/watch?v=vmEHCJofslg&t=767s) <br/>
 
