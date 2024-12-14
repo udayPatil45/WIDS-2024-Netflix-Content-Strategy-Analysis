@@ -17,11 +17,9 @@ Aim: Build a foundation in Python programming and essential libraries for data a
 ## Task Overview
 You are provided with a dataset. Your goal is to perform the following analyses using Python: 
 1. Highest Elo
-
 Identify the player with the highest Elo rating in the dataset.
 
 2. Top 10 Players With Highest Elo
-
 List the top 10 players with the highest Elo ratings.
 
 3. Time Trend of Top 10's Average Elo Each Year
