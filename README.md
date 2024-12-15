@@ -68,7 +68,7 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 [Handling missing values in dataset](https://youtu.be/vLqTf2b6GZw?feature=shared](https://youtu.be/uDr67HBIPz8?feature=shared
 ) <br/>
 
-3. 3. Parse the Date Column
+3. Parse the Date Column
 * Convert the "dt" column (datetime string) into a proper datetime format.
 * Extract and create new columns for: <br/>
   Year <br/>
