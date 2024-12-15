@@ -111,12 +111,12 @@ In this assignment, you will practice cleaning and preprocessing data using the 
   * Discuss the potential reasons for these inconsistencies and their relationship with uncertainty. <br/>
     
 5. Export the Cleaned Data <br/>
-   Save the cleaned dataset to a new file (e.g., cleaned_temperatures.csv). <br/>
-   A Python notebook or script containing: <br/>
+   * Save the cleaned dataset to a new file (e.g., cleaned_temperatures.csv). <br/>
+   * A Python notebook or script containing: <br/>
     Data filtering based on uncertainty. <br/>
     Trend analysis of average temperature with error bars. <br/>
     Analysis of uncertainty trends over time. <br/>
     Identification of high-uncertainty and inconsistent periods. <br/>
-  A line graph of average temperature with error bars representing uncertainty. <br/>
-  A separate line graph showing the trend in uncertainty over time. <br/>
-  Insights and explanations on how uncertainty impacts data consistency and analysis. <br/>
+  * A line graph of average temperature with error bars representing uncertainty. <br/>
+  * A separate line graph showing the trend in uncertainty over time. <br/>
+  * Insights and explanations on how uncertainty impacts data consistency and analysis. <br/>
