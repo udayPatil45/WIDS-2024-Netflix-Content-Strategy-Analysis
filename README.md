@@ -97,8 +97,19 @@ In this assignment, you will practice cleaning and preprocessing data using the 
      Use Matplotlib’s errorbar function to plot the temperature trend with uncertainty. <br/>
      Highlight years where uncertainty is exceptionally high. <br/>
 
+* Analyze Trends in Uncertainty <br/>
+  Plot the trend of AverageTemperatureUncertainty over time separately. <br/>
+  Observe whether uncertainty has increased or decreased over time and hypothesize why (e.g., improved measurement techniques). <br/>
+  * Hints: <br/>
+    Group data by Year and calculate the mean uncertainty. <br/>
+    Plot the yearly uncertainty trend. <br/>
 
-  
+* Identify High-Uncertainty and Inconsistent Periods <br/>
+  * Identify years where: <br/>
+    The mean uncertainty exceeds a reasonable threshold. <br/>
+    Temperature values show significant fluctuations (e.g., large outliers). <br/>
+  * Discuss the potential reasons for these inconsistencies and their relationship with uncertainty. <br/>
+    
 5. Export the Cleaned Data <br/>
    Save the cleaned dataset to a new file (e.g., cleaned_temperatures.csv).
 
