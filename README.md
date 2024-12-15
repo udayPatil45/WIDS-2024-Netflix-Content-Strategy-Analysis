@@ -58,3 +58,9 @@ Track Magnus Carlsen's Elo rating over time.
 # Objective 
 In this assignment, you will practice cleaning and preprocessing data using the Global Land Temperatures by Country dataset. The focus will be on handling inconsistencies, parsing date information, and preparing the dataset for analysis.
 
+## Tasks
+1. Load the Dataset
+* Import the dataset using Pandas.
+* Display the first 10 rows and use .info()/.describe() method to examine statistical information the structure of the dataset.
+
+
