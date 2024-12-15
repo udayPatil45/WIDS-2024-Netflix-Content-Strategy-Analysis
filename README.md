@@ -65,8 +65,8 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 
 2. Handle Missing Values
 * Identify columns with missing values. <br/>
-[Handling missing values in dataset](https://youtu.be/uDr67HBIPz8?feature=shared) <br/>
-  Use the method that you feel is logical 
+  [Handling missing values in dataset](https://youtu.be/uDr67HBIPz8?feature=shared) <br/>
+  Analyze the missing data pattern and using a method that you find logical or beneficial for further analysis. <br/>
 
 3. Parse the Date Column
 * Convert the "dt" column (datetime string) into a proper datetime format.
@@ -75,7 +75,7 @@ In this assignment, you will practice cleaning and preprocessing data using the 
   Year <br/>
   Month <br/>
   Day (if necessary) <br/>
-  Example: Split 1750-01-01 into Year = 1750, Month = 1.
+  Example: Split 1750-01-01 into Year = 1750, Month = 1. <br/>
 
 4. Check for Data Consistency
 * Filter Data Based on Uncertainty <br/>
