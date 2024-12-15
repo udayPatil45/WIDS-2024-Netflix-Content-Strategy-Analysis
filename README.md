@@ -54,3 +54,7 @@ Track Magnus Carlsen's Elo rating over time.
 * Include visualizations for all time trend questions.
 * Provide a brief interpretation of the trends observed in each plot.
 
+# Week 2
+# Objective 
+In this assignment, you will practice cleaning and preprocessing data using the Global Land Temperatures by Country dataset. The focus will be on handling inconsistencies, parsing date information, and preparing the dataset for analysis.
+
