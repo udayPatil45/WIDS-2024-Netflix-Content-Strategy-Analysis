@@ -76,4 +76,14 @@ In this assignment, you will practice cleaning and preprocessing data using the 
   Day (if necessary) <br/>
   Example: Split 1750-01-01 into Year = 1750, Month = 1.
 
+4. Check for Data Consistency
+* Investigate if temperature values for earlier years (e.g., 1700s) differ significantly from later years (e.g., 1900s or 2000s). Use these steps: <br/>
+  Group the data by Year and calculate the mean temperature for each year. <br/>
+  Plot a line graph showing average temperatures over time. <br/>
+* Identify and document any inconsistencies or outliers in temperature trends: <br/>
+  Are the earlier temperatures unrealistic (e.g., extreme fluctuations)? <br/>
+  Is there a missing period or inconsistent measurement methods? <br/>
+  
+5. Export the Cleaned Data <br/>
+   Save the cleaned dataset to a new file (e.g., cleaned_temperatures.csv).
 
