@@ -61,12 +61,13 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 ## Tasks
 1. Load the Dataset
 * Import the dataset using Pandas.
-* Display the first 10 rows and use .info()/.describe() method to examine statistical information the structure of the dataset.
+* Display the first 10 rows and use .info()/.describe() method to examine statistical information and the structure of the dataset.
 
 2. Handle Missing Values
 * Identify columns with missing values. <br/>
 [Handling missing values in dataset](https://youtu.be/vLqTf2b6GZw?feature=shared](https://youtu.be/uDr67HBIPz8?feature=shared
 ) <br/>
+  Use the method that you feel is logical 
 
 3. Parse the Date Column
 * Convert the "dt" column (datetime string) into a proper datetime format.
@@ -77,12 +78,26 @@ In this assignment, you will practice cleaning and preprocessing data using the 
   Example: Split 1750-01-01 into Year = 1750, Month = 1.
 
 4. Check for Data Consistency
-* Investigate if temperature values for earlier years (e.g., 1700s) differ significantly from later years (e.g., 1900s or 2000s). Use these steps: <br/>
-  Group the data by Year and calculate the mean temperature for each year. <br/>
-  Plot a line graph showing average temperatures over time. <br/>
-* Identify and document any inconsistencies or outliers in temperature trends: <br/>
-  Are the earlier temperatures unrealistic (e.g., extreme fluctuations)? <br/>
-  Is there a missing period or inconsistent measurement methods? <br/>
+* Filter Data Based on Uncertainty <br/>
+  Define a threshold for acceptable uncertainty (e.g., AverageTemperatureUncertainty ≤ 2.0). <br/>
+  Filter out data points with uncertainty above this threshold. <br/>
+  Report the size of the dataset before and after filtering. <br/>
+  Justify the chosen threshold and discuss its impact on data quality. <br/>
+  * Hints <br/>
+    Identify rows with AverageTemperatureUncertainty > 2.0. <br/>
+    Create a new filtered DataFrame excluding these rows. <br/>
+    Print the size of the original dataset vs. the filtered dataset. <br/>
+
+* Visualize Temperature Trend with Uncertainty <br/>
+  * Group the dataset by Year and calculate: <br/>
+   Mean of AverageTemperature. <br/>
+   Mean of AverageTemperatureUncertainty. <br/>
+   Plot the average temperature trend over time with error bars representing uncertainty. <br/>
+   * Hints <br/>
+     Use Matplotlib’s errorbar function to plot the temperature trend with uncertainty. <br/>
+     Highlight years where uncertainty is exceptionally high. <br/>
+
+
   
 5. Export the Cleaned Data <br/>
    Save the cleaned dataset to a new file (e.g., cleaned_temperatures.csv).
