@@ -63,4 +63,9 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 * Import the dataset using Pandas.
 * Display the first 10 rows and use .info()/.describe() method to examine statistical information the structure of the dataset.
 
+2. Handle Missing Values
+* Identify columns with missing values.
+[Handling missing values in dataset](https://youtu.be/vLqTf2b6GZw?feature=shared](https://youtu.be/uDr67HBIPz8?feature=shared
+) <br/>
+
 
