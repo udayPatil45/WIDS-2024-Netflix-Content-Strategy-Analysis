@@ -65,12 +65,12 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 
 2. Handle Missing Values
 * Identify columns with missing values. <br/>
-[Handling missing values in dataset](https://youtu.be/vLqTf2b6GZw?feature=shared](https://youtu.be/uDr67HBIPz8?feature=shared
-) <br/>
+[Handling missing values in dataset](https://youtu.be/uDr67HBIPz8?feature=shared) <br/>
   Use the method that you feel is logical 
 
 3. Parse the Date Column
 * Convert the "dt" column (datetime string) into a proper datetime format.
+  [Tutorial](https://youtu.be/fNzUhp5uHFY?feature=shared) <br/> 
 * Extract and create new columns for: <br/>
   Year <br/>
   Month <br/>
