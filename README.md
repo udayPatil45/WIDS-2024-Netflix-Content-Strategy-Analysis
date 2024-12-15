@@ -70,10 +70,10 @@ In this assignment, you will practice cleaning and preprocessing data using the 
 
 3. 3. Parse the Date Column
 * Convert the "dt" column (datetime string) into a proper datetime format.
-* Extract and create new columns for:
-  Year
-  Month
-  Day (if necessary)
+* Extract and create new columns for: <br/>
+  Year <br/>
+  Month <br/>
+  Day (if necessary) <br/>
   Example: Split 1750-01-01 into Year = 1750, Month = 1.
 
 
