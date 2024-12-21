@@ -1,0 +1,62 @@
+import pandas as pd
+
+#Step1
+# Load dataset
+df = pd.read_csv('GlobalLandTemperaturesByCountry.csv')
+
+# Display first 10 rows
+print(df.head(10))
+
+# Examine dataset structure and summary
+print(df.info())
+print(df.describe())
+
+#step2
+print(df.isnull().sum())
+df = df.dropna()
+df['AverageTemperature'] = df['AverageTemperature'].interpolate()
+
+#step 3
+df['dt'] = pd.to_datetime(df['dt'])
+df['Year'] = df['dt'].dt.year
+df['Month'] = df['dt'].dt.month
+df['day'] = df['dt'].dt.day
+print(df)
+
+#step 4
+threshold = 2.0
+filtered_df = df[df['AverageTemperatureUncertainty'] <= threshold]
+print("Original size:", df.shape)
+print("Filtered size:", filtered_df.shape)
+yearly_data = filtered_df.groupby('Year').agg({
+    'AverageTemperature': 'mean',
+    'AverageTemperatureUncertainty': 'mean'
+}).reset_index()
+
+import matplotlib.pyplot as plt
+plt.errorbar(
+    yearly_data['Year'],
+    yearly_data['AverageTemperature'],
+    yerr=yearly_data['AverageTemperatureUncertainty'],
+    fmt='-o', label='Temperature Trend'
+)
+plt.xlabel('Year')
+plt.ylabel('Average Temperature (°C)')
+plt.title('Temperature Trend with Uncertainty')
+plt.legend()
+plt.show()
+
+plt.plot(
+    yearly_data['Year'],
+    yearly_data['AverageTemperatureUncertainty'], label='Uncertainty Trend'
+)
+plt.xlabel('Year')
+plt.ylabel('Uncertainty (°C)')
+plt.title('Trend in Average Temperature Uncertainty')
+plt.legend()
+plt.show()
+high_uncertainty = yearly_data[yearly_data['AverageTemperatureUncertainty'] > threshold]
+print(high_uncertainty)
+
+#step 5
+filtered_df.to_csv('cleaned_temperatures.csv', index=False)
