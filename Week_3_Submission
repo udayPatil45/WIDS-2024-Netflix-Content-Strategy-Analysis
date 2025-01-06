@@ -1,0 +1,80 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Data Exploration and Summary
+airbnb_data = pd.read_csv("AB_NYC_2019.csv")  # Replace with the dataset path
+
+print(airbnb_data.info())
+print(airbnb_data.describe())
+categorical_columns = airbnb_data.select_dtypes(include=['object']).columns
+numerical_columns = airbnb_data.select_dtypes(include=['int64', 'float64']).columns
+print("Categorical Columns:", categorical_columns)
+print("Numerical Columns:", numerical_columns)
+
+sns.histplot(airbnb_data['price'], bins=50, kde=True)
+plt.title('Price Distribution')
+plt.show()
+sns.histplot(airbnb_data['number_of_reviews'], bins=50, kde=False)
+plt.title('Number of Reviews Distribution')
+plt.show()
+sns.histplot(airbnb_data['availability_365'], bins=50, kde=False)
+plt.title('Availability Distribution')
+plt.show()
+
+# Data Cleaning
+missing_values = airbnb_data.isnull().sum()
+print("Missing Values:\n", missing_values)
+
+duplicated_rows = airbnb_data.duplicated().sum()
+print("Number of duplicate rows:", duplicated_rows)
+airbnb_data.drop_duplicates(inplace=True)
+
+# Categorical Data Processing
+room_type_dist = airbnb_data['room_type'].value_counts()
+room_type_dist.plot(kind='bar', title="Room Type Distribution")
+plt.show()
+neighborhood_dist = airbnb_data['neighbourhood_group'].value_counts()
+neighborhood_dist.plot(kind='bar', title="Neighborhood Group Distribution")
+plt.show()
+airbnb_data = pd.get_dummies(airbnb_data, columns=['room_type', 'neighbourhood_group'], drop_first=True)
+
+# Outlier Detection and Handling
+plt.figure(figsize=(12, 6))
+sns.boxplot(airbnb_data['price'])
+plt.title('Price Boxplot')
+plt.show()
+Q1 = airbnb_data['price'].quantile(0.25)
+Q3 = airbnb_data['price'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+airbnb_data = airbnb_data[(airbnb_data['price'] >= lower_bound) & (airbnb_data['price'] <= upper_bound)]
+
+from scipy.stats import zscore
+airbnb_data['zscore_price'] = zscore(airbnb_data['price'])
+airbnb_data = airbnb_data[airbnb_data['zscore_price'].abs() < 3]
+
+# Date Transformation
+airbnb_data['last_review'] = pd.to_datetime(airbnb_data['last_review'], errors='coerce')
+airbnb_data['last_review_year'] = airbnb_data['last_review'].dt.year
+reviews_per_year = airbnb_data.groupby('last_review_year').size()
+plt.figure(figsize=(12, 6))
+reviews_per_year.plot(kind='bar')
+plt.title('Number of Reviews Per Year')
+plt.show()
+airbnb_data['last_review_month'] = airbnb_data['last_review'].dt.month
+reviews_per_month = airbnb_data.groupby('last_review_month').size()
+plt.figure(figsize=(12, 6))
+reviews_per_month.plot(kind='bar')
+plt.title('Number of Reviews Per Month')
+plt.show()
+
+# Advanced Analysis
+from sklearn.cluster import KMeans
+cluster_data = airbnb_data[['price', 'minimum_nights', 'availability_365']].dropna()
+kmeans = KMeans(n_clusters=4, random_state=42).fit(cluster_data)
+airbnb_data['cluster'] = kmeans.labels_
+sns.scatterplot(x='price', y='availability_365', hue='cluster', data=airbnb_data)
+plt.title('Clusters of Rentals')
+plt.show()
